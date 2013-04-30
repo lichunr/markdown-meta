@@ -3,7 +3,10 @@
         "description": "read metadata from markdown files",
         "version": "0.0.1",
         "author" : "Chun Li <me@lichun.cc>",
-        "private": true,
+        "keyword": [
+            "markdown",
+            "metadata"
+        ],
         "main" : "./lib/index.js",
         "engines": {
             "node": ">=0.8"
