@@ -19,6 +19,20 @@ Usage
 
 Use `<!--*` and `*-->` tags in the markdown files to include the metadata.
 
+Inside the backend code:
+    var markdown_meta = require('markdown-meta');
+    var content = "<!--* author: chun *-->";
+    var metadata = markdown_meta.parse(content);
+
+Inside the client code:
+    <script type='type/javascript' src='markdown-meta.js'></script>
+    <script type='type/javascript'>
+        var content = "<!--* author: chun *-->";
+        var metadata = markdown_meta.parse(content);
+    </script>
+
+the `metadata` will be a Javascript Object.
+
 Metadata Format
 ===============
 
