@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <script type='text/javascript' src='../lib/markdown-meta.js'></script>
+    </head>
+    <body>
+        <script type='text/javascript'>
+            var validMetadata = "<!--*id: 1; \
+                          author: chunli; \
+                          title : This is a test; \
+                          tag : ['test','nodejs']*-->";
+            var result = markdown_meta.parse(validMetadata);
+
+            var obj = {
+                id : 1,
+                author : 'chunli',
+                title : "This is a test",
+                tag : ['test', 'nodejs']
+            };
+
+            if (JSON.stringify(result) === JSON.stringify(obj)) {
+                alert('pass');
+            } else {
+                alert('fail');
+            }
+        </script>
+    </body>
+</html>
