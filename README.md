@@ -1,7 +1,7 @@
 markdown-meta
 =============
 
-read metadata from markdown files
+read metadata from markdown files, or convert a js metadata object to markdown comment form
 
 Installation
 =============
@@ -24,6 +24,8 @@ Inside the backend code:
     var markdown_meta = require('markdown-meta');
     var content = "<!--* author: chun *-->";
     var metadata = markdown_meta.parse(content);
+    
+    var toMarkdown = markdown_meta.toMarkdown(metadata);
 
 Inside the client code:
 
@@ -31,6 +33,7 @@ Inside the client code:
     <script type='type/javascript'>
         var content = "<!--* author: chun *-->";
         var metadata = markdown_meta.parse(content);
+        var toMarkdown = markdown_meta.toMarkdown(metadata);
     </script>
 
 the `metadata` will be a Javascript Object.

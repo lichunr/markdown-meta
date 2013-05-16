@@ -19,5 +19,10 @@ assert.deepEqual(result, obj, "valid metadata didn't pass");
 
 var emptyMetadata = "";
 result = markdown_meta.parse(emptyMetadata);
-obj = {};
-assert.deepEqual(result, obj, "empty metadata didn't pass");
+obj1 = {};
+assert.deepEqual(result, obj1, "empty metadata didn't pass");
+
+var toMarkdown = markdown_meta.toMarkdown(obj);
+var revertBack = markdown_meta.parse(toMarkdown);
+
+assert.deepEqual(revertBack, obj, "revert back didn't pass");

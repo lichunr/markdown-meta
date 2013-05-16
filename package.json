@@ -1,7 +1,7 @@
 {
     "name": "markdown-meta",
         "description": "read metadata from markdown files",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "author" : "Chun Li <me@lichun.cc>",
         "keyword": [
             "markdown",
